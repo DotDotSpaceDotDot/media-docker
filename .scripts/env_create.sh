@@ -81,7 +81,7 @@ env_create() {
 
   if [[ -z "$(run_sh "$SCRIPTDIR" "env_get" "CONTAINER_DIR")" ]] ; then
     run_sh "$SCRIPTDIR" "env_set" \
-      "CONTAINER_DIR" "${BASE_DIR}/" "${DESTDIR}/.env"
+      "CONTAINER_DIR" "${BASEDIR}/containers" "${DESTDIR}/.env"
   fi
 
   echo 0
