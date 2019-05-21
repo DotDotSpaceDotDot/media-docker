@@ -524,8 +524,8 @@
 - name: Watchtower
   description: Container Update
   maintainer:
-    name: v2tec
-    url: https://hub.docker.com/r/v2tec/watchtower/
+    name: containrrr
+    url: https://hub.docker.com/r/containrrr/watchtower/
   url:
   ports:
   arch:
