@@ -47,6 +47,10 @@ sudo media-docker
 - [component files](https://media-docker.com/docs/files/)
 - [supported vpn providers](https://github.com/haugene/docker-transmission-openvpn#supported-providers)
 
+## others
+
+unfortunately, my day job and general life events make me pretty much unable to make meaningful contributions to this project at this time, including support as well as new development. i'll still check and approve pull requests when i can, but if you need more active development or support, check in with the folks at https://github.com/GhostWriters/DockSTARTer. last i checked, they had active development and community, so they may be your best bet! thanks!
+
 ## thanks!
 
 this very much stands on the shoulders of those who came before, all this has done is made the deployment process simple and straightforward to configure.
