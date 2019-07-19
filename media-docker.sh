@@ -152,7 +152,7 @@ main() {
   if [[ ! -d ${BASEDIR}/.git ]] ; then
     _VERBOSE=6
     log 5 "Downloading media-docker to ${BASEDIR}/media-docker."
-    git clone "https://github.com/joskore/media-docker" \
+    git clone "https://github.com/DotDotSpaceDotDot/media-docker" \
       "${BASEDIR}/media-docker" || log 3 "Error occurred when cloning repo."
 
     log 6 "Running newly downloaded media-docker."
