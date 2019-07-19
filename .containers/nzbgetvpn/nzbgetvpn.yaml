@@ -11,6 +11,14 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - TZ=${TIMEZONE}
+      - ENABLE_PRIVOXY=${NZBGETVPN_ENABLE_PRIVOXY}
+      - LAN_NETWORK=${LAN_NETWORK}
+      - NAME_SERVERS=${NS1},${NS2}
+      - VPN_ENABLED=${VPN_ENABLE}
+      - VPN_OPTIONS=${VPN_OPTIONS}
+      - VPN_PASS=${VPN_PASS}
+      - VPN_PROV=${VPN_PROVIDER}
+      - VPN_USER=${VPN_USER}      
     networks:
       - internal
       - proxied
