@@ -1,4 +1,4 @@
 services:
   # NZBGetvpn
   nzbgetvpn:
-    image: jshridha/docker-nzbgetvpn:latest
+    image: jshridha/docker-nzbgetvpn
