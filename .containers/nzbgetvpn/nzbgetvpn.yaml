@@ -23,14 +23,3 @@ services:
       - vpn
       - proxied
     restart: unless-stopped
-
-nzbgetvpn_proxy:
-    container_name: nzbgetvpn_proxy
-    depends_on:
-      - nzbgetvpn
-    links:
-      - nzbgetvpn:nzbgetvpn
-    networks:
-      - vpn
-      - proxied
-    restart: unless-stopped
