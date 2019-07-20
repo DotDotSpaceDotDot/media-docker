@@ -9,6 +9,7 @@ menu_vpn() {
   OPTIONS+=("LAN_NETWORK" "Local LAN.")
   OPTIONS+=("NS1" "DNS 1.")
   OPTIONS+=("NS2" "DNS 2.")
+  OPTIONS+=("VPN_OPTIONS" "Additional VPN options.")
 
   log 7 "Opening VPN menu."
   local SELECTION
