@@ -26,7 +26,4 @@ services:
       - vpn
     expose:
       - 6789
-    networks:
-      - vpn
-      - proxied
     restart: unless-stopped
