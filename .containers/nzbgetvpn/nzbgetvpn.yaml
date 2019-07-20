@@ -20,6 +20,6 @@ services:
       - VPN_PROV=${VPN_PROVIDER}
       - VPN_USER=${VPN_USER}      
     networks:
-      - internal
+      - vpn
       - proxied
     restart: unless-stopped
