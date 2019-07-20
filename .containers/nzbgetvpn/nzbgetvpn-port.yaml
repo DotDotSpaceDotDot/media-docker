@@ -3,3 +3,4 @@ services:
   nzbgetvpn:
     ports:
       - 6789:6789
+      - 8118:8118
