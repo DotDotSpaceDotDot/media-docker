@@ -6,6 +6,9 @@ menu_vpn() {
   OPTIONS+=("VPN_PROVIDER" "VPN service provider.")
   OPTIONS+=("VPN_USER" "User name for VPN service.")
   OPTIONS+=("VPN_PASS" "Password for VPN service.")
+  OPTIONS+=("LAN_NETWORK" "Local LAN.")
+  OPTIONS+=("NS1" "DNS 1.")
+  OPTIONS+=("NS2" "DNS 2.")
 
   log 7 "Opening VPN menu."
   local SELECTION
