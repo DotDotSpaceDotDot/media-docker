@@ -23,8 +23,8 @@ services:
     devices:
       - /dev/net/tun
     dns:
-      - 8.8.8.8
-      - 8.8.4.4
+      - ${NS1}
+      - ${NS2}
     networks:
       - vpn
     expose:
