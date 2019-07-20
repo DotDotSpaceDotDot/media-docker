@@ -18,7 +18,14 @@ services:
       - VPN_OPTIONS=${VPN_OPTIONS}
       - VPN_PASS=${VPN_PASS}
       - VPN_PROV=${VPN_PROVIDER}
-      - VPN_USER=${VPN_USER}      
+      - VPN_USER=${VPN_USER}
+    dns:
+      - ${NS1}
+      - ${NS2}
+    networks:
+      - vpn
+    expose:
+      - 6789
     networks:
       - vpn
       - proxied
