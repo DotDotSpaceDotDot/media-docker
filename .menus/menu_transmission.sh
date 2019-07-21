@@ -3,9 +3,9 @@ set -euo pipefail
 
 menu_transmission() {
   local -a OPTIONS
-  OPTIONS+=("TRANS_WEBPROXY" "Enable Web Proxy.")
+  OPTIONS+=("TRANS_WEBPROXY" "Enable Web Proxy. True/False")
   OPTIONS+=("TRANS_UI" "Change Web UI.")
-  OPTIONS+=("TRANS_RATIO_LIMIT_ENABLE" "Enable Ratio Limit. True/False")
+  OPTIONS+=("TRANS_RATIO_LIMIT_ENABLED" "Enable Ratio Limit. True/False")
   OPTIONS+=("TRANS_RATIO_LIMIT" "Set Ratio Limit.")
   OPTIONS+=("TRANS_IDLE_SEEDING_LIMIT_ENABLED" "Enable Idle Limit. True/False.")
   OPTIONS+=("TRANS_IDLE_SEEDING_LIMIT" "Set Idle Time Limit.")
