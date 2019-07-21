@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-menu_vpn() {
+menu_transmission() {
   local -a OPTIONS
   OPTIONS+=("WEBPROXY_ENABLED" "Enable Web Proxy.")
   OPTIONS+=("TRANSMISSION_WEB_UI" "Change Web UI.")
