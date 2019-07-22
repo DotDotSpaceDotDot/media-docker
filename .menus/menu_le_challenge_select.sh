@@ -26,7 +26,7 @@ menu_le_challenge_select() {
       log 7 "HTTP selected."
       log 6 "Writing [acme.httpChallenge] block."
       run_sh "$SCRIPTDIR" "toml_write" \
-        "$FILE" "acme.httpChallenge.entryPoint" "https"
+   #     "$FILE" "acme.httpChallenge.entryPoint" "https"
       run_sh "$SCRIPTDIR" "env_set" "LE_CHLG_PROV" "HTTP"
     ;;
     "dns")
