@@ -41,7 +41,6 @@ menu_main() {
       run_sh "$SCRIPTDIR" "editor_open" "${BASEDIR}/.apps" \
         || run_sh "$MENUDIR" "menu_main"
     ;;
-    "compose")
       log 6 "Opening compose."
       run_sh "$SCRIPTDIR" "editor_open" "${BASEDIR}/docker-compose.yml" \
         || run_sh "$MENUDIR" "menu_main"
