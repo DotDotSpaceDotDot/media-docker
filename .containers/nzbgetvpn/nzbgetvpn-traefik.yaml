@@ -3,7 +3,7 @@ services:
   nzbgetvpn:
     labels:
       - traefik.backend=nzbgetvpn
-      - traefik.frontend.rule=Host:nzbget.${DOMAIN}
+      - traefik.frontend.rule=Host:${DOMAIN}; PathPrefixStrip: /nzbgetvpn
       - traefik.docker.network=proxied
       - traefik.port=6789
     expose:
