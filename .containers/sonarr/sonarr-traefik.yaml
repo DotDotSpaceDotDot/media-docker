@@ -3,7 +3,7 @@ services:
   sonarr:
     labels:
       - traefik.backend=sonarr
-      - traefik.frontend.rule=Host:sonarr.${DOMAIN}
+      - traefik.frontend.rule=Host:${DOMAIN}; PathPrefixStrip: /sonarr
       - traefik.docker.network=proxied
       - traefik.port=8989
     expose:
