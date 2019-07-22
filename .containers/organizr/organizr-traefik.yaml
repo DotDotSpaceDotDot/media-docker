@@ -3,7 +3,7 @@ services:
   organizr:
     labels:
       - traefik.backend=organizr
-      - traefik.frontend.rule=Host:organizr.${DOMAIN}
+      - traefik.frontend.rule=Host:${DOMAIN}; PathPrefixStrip: /organizr
       - traefik.docker.network=proxied
       - traefik.port=80
     expose:
