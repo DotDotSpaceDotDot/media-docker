@@ -7,7 +7,7 @@ services:
   transmission_proxy:
     labels:
       - traefik.backend=vpn_proxy
-      - traefik.frontend.rule=Host:transmission.${DOMAIN}
+      - traefik.frontend.rule=Host:${DOMAIN}; PathPrefixStrip: /transmission
       - traefik.docker.network=proxied
       - traefik.port=8080
     expose:
