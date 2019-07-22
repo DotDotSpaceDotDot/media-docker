@@ -3,7 +3,7 @@ services:
   emby:
     labels:
       - traefik.backend=emby
-      - traefik.frontend.rule=Host:${DOMAIN}; PathPrefixStrip: /emby
+      - "traefik.frontend.rule=Host:${DOMAIN}; PathPrefixStrip: /emby"
       - traefik.docker.network=proxied
       - traefik.port=8096
     expose:
