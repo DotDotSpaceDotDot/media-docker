@@ -3,7 +3,7 @@ services:
   ombi:
     labels:
       - traefik.backend=ombi
-      - traefik.frontend.rule=Host:ombi.${DOMAIN}
+      - traefik.frontend.rule=Host:${DOMAIN}; PathPrefixStrip: /ombi
       - traefik.docker.network=proxied
       - traefik.port=3579
     expose:
