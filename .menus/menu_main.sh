@@ -8,6 +8,7 @@ menu_main() {
   OPTIONS+=("Docker Prune" "Cleanup Docker system.")
   OPTIONS+=(".ENV" "View or edit .env.")
   OPTIONS+=(".APPS" "View or edit .apps.")
+  OPTIONS+=("Compose" "View or edit Docker-Compose.")
 
   log 7 "Opening main menu."
   local SELECTION
@@ -38,6 +39,11 @@ menu_main() {
     ".APPS")
       log 6 "Opening .apps."
       run_sh "$SCRIPTDIR" "editor_open" "${BASEDIR}/.apps" \
+        || run_sh "$MENUDIR" "menu_main"
+    ;;
+    "compose")
+      log 6 "Opening compose."
+      run_sh "$SCRIPTDIR" "editor_open" "${BASEDIR}/docker-compose.yml" \
         || run_sh "$MENUDIR" "menu_main"
     ;;
     *)
