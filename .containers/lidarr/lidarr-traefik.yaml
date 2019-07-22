@@ -3,7 +3,7 @@ services:
   lidarr:
     labels:
       - traefik.backend=lidarr
-      - traefik.frontend.rule=Host:lidarr.${DOMAIN}
+      - traefik.frontend.rule=Host:${DOMAIN}; PathPrefixStrip: /lidarr
       - traefik.docker.network=proxied
       - traefik.port=8686
     expose:
