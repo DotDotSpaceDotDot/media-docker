@@ -3,7 +3,7 @@ services:
   portainer:
     labels:
       - traefik.backend=portainer
-      - traefik.frontend.rule=Host:portainer.${DOMAIN}
+      - traefik.frontend.rule=Host:${DOMAIN}; PathPrefixStrip: /portainer
       - traefik.docker.network=proxied
       - traefik.port=9000
     expose:
