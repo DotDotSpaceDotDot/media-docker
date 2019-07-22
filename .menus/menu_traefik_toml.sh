@@ -42,9 +42,10 @@ menu_traefik_toml() {
 
   log 6 "Starting TOML creation process."
 
-  log 6 "Writing [web] block."
+  log 6 "Writing [api] block."
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" \
     "defaultEntryPoints" "[\"http\",\"https\"]"
+  run_sh "$SCRIPTDIR" "toml_write" "$FILE" "dashboard" "true"  
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" "web.address" ":8080"
 
   log 6 "Writing [entryPoints.traefik.auth] block."
