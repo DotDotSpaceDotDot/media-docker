@@ -45,8 +45,9 @@ menu_traefik_toml() {
   log 6 "Writing [api] block."
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" \
     "defaultEntryPoints" "[\"http\",\"https\"]"
-  run_sh "$SCRIPTDIR" "toml_write" "$FILE" "dashboard" "true"  
-  run_sh "$SCRIPTDIR" "toml_write" "$FILE" "web.address" ":8080"
+  run_sh "$SCRIPTDIR" "toml_write" "$FILE" "api.entryPoint" "traefik"
+  run_sh "$SCRIPTDIR" "toml_write" "$FILE" "api.dashboard" "true"  
+  run_sh "$SCRIPTDIR" "toml_write" "$FILE" "api.address" ":8080"
 
   log 6 "Writing [entryPoints.traefik.auth] block."
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" \
@@ -61,8 +62,8 @@ menu_traefik_toml() {
   
   log 6 "Writing [file] block."
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" \
-  run_sh "$SCRIPTDIR" "toml_write" "$FILE" "watch" "true"
-  run_sh "$SCRIPTDIR" "toml_write" "$FILE" "filename" "/etc/traefik/rules.toml"
+  run_sh "$SCRIPTDIR" "toml_write" "$FILE" "file.watch" "true"
+  run_sh "$SCRIPTDIR" "toml_write" "$FILE" "file.filename" "/etc/traefik/rules.toml"
 
   log 6 "Writing [docker] block."
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" \
@@ -78,7 +79,7 @@ menu_traefik_toml() {
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" "acme.onDemand" "false"
   
   log 6 "Writing [acme.httpChallenge] block."
-  run_sh "$SCRIPTDIR" "toml_write" "$FILE" "entryPoint" "http"
+  run_sh "$SCRIPTDIR" "toml_write" "$FILE" "acme.httpChallenge.entryPoint" "http"
 
   log 7 "Opening ACME challenge selection menu."
   run_sh "$MENUDIR" "menu_le_challenge_select"
