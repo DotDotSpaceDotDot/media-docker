@@ -3,7 +3,7 @@ services:
   jackett:
     labels:
       - traefik.backend=jackett
-      - traefik.frontend.rule=Host:jackett.${DOMAIN}
+      - traefik.frontend.rule=Host:${DOMAIN}; PathPrefixStrip: /jackett
       - traefik.docker.network=proxied
       - traefik.port=9117
     expose:
