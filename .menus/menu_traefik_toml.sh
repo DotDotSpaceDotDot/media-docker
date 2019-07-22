@@ -63,7 +63,7 @@ menu_traefik_toml() {
   
   log 6 "Writing [file] block."
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" "file"
-  run_sh "$SCRIPTDIR" "toml_write" "$FILE" \
+ # run_sh "$SCRIPTDIR" "toml_write" "$FILE" \
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" "file.watch" "true"
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" "file.filename" "/etc/traefik/rules.toml"
 
