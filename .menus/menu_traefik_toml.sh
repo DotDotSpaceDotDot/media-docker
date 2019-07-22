@@ -54,6 +54,7 @@ menu_traefik_toml() {
     "entryPoints.traefik.auth.basic.usersfile" "/traefik.passwd"
 
   log 6 "Writing [entryPoints] block."
+  run_sh "$SCRIPTDIR" "toml_write" "$FILE" "entryPoints.entryPoints"
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" "entryPoints.http.address" ":80"
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" \
     "entryPoints.http.redirect.entryPoint" "https"
