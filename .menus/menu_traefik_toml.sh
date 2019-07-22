@@ -58,6 +58,11 @@ menu_traefik_toml() {
     "entryPoints.http.redirect.entryPoint" "https"
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" "entryPoints.https.address" ":443"
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" "entryPoints.https.tls"
+  
+  log 6 "Writing [file] block."
+  run_sh "$SCRIPTDIR" "toml_write" "$FILE" \
+  run_sh "$SCRIPTDIR" "toml_write" "$FILE" "watch" "true"
+  run_sh "$SCRIPTDIR" "toml_write" "$FILE" "filename" "/etc/traefik/rules.toml"
 
   log 6 "Writing [docker] block."
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" \
