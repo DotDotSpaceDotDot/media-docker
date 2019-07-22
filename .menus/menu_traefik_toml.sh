@@ -70,6 +70,9 @@ menu_traefik_toml() {
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" "acme.entryPoint" "https"
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" "acme.onHostRule" "true"
   run_sh "$SCRIPTDIR" "toml_write" "$FILE" "acme.onDemand" "false"
+  
+  log 6 "Writing [acme.httpChallenge] block."
+  run_sh "$SCRIPTDIR" "toml_write" "$FILE" "entryPoint" "http"
 
   log 7 "Opening ACME challenge selection menu."
   run_sh "$MENUDIR" "menu_le_challenge_select"
